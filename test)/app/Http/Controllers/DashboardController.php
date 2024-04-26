@@ -17,8 +17,11 @@ class DashboardController extends Controller
     
     // Method to get Shopify API client
     private function getShopifyClient()
-    {
+    {        
+     //replace X with store name and Y with api
         return new Client([
+            'base_uri' => 'https://x.myshopify.com/admin/api/2022-01/',
+            'headers' => ['X-Shopify-Access-Token' => 'y']
         ]);
     }
     
