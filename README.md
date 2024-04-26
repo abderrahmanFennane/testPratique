@@ -136,9 +136,13 @@ E. DATABASE
 	FROM employee
 	WHERE salaire > 2 * (SELECT MIN(salaire) FROM employee);
 # test Pratique
-composer update
+composer update  
+
 php artisan migrate
-php artisan serve
-npm install
-npm run dev
+
+php artisan serve  
+
+npm install  
+ 
+npm run dev  
 
