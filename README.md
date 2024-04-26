@@ -1,4 +1,4 @@
-# testPratique
+# test technique
 Partie I
 
     Nom et prénom: Abderrahman Fennane
@@ -102,29 +102,29 @@ E. DATABASE
 
     Nombre d'employés par jour d'inscription: Requête SQL.
         Réponse: SELECT DATE(create_at) AS date_inscription, COUNT(*) AS nb_employés
-FROM employee
-GROUP BY DATE(create_at);
+		FROM employee
+	GROUP BY DATE(create_at);
 
 
     Employés inscrits le 3/10/2021: Requête SQL.
         Réponse: SELECT *
-FROM employee
-WHERE DATE(create_at) = '2021-10-03';
+	FROM employee
+	WHERE DATE(create_at) = '2021-10-03';
 
     Employés avec email spécifique: Requête SQL.
         Réponse: SELECT * 
-FROM employee 
-WHERE email REGEXP '^[bcdfghjklmnpqrstvwxyz][0-9]';
+	FROM employee 
+	WHERE email REGEXP '^[bcdfghjklmnpqrstvwxyz][0-9]';
 
 
     Mise en minuscules des noms: Requête SQL.
         Réponse: UPDATE employee
-SET first_name = LOWER(first_name), last_name = LOWER(last_name);
+	SET first_name = LOWER(first_name), last_name = LOWER(last_name);
 
 
     Modification de colonne: Requête SQL.
         Réponse: ALTER TABLE employee
-CHANGE COLUMN create_at date_creation TIMESTAMP;
+	CHANGE COLUMN create_at date_creation TIMESTAMP;
 
     Différence entre DELETE et TRUNCATE: Explication.
         Réponse: •	DELETE : Supprime les enregistrements spécifiés d'une table. Il peut être accompagné d'une condition pour filtrer les enregistrements à supprimer. 
@@ -133,6 +133,12 @@ CHANGE COLUMN create_at date_creation TIMESTAMP;
 
     Liste des employés avec salaire supérieur: Requête SQL.
         Réponse: SELECT *
-FROM employee
-WHERE salaire > 2 * (SELECT MIN(salaire) FROM employee);
-.
+	FROM employee
+	WHERE salaire > 2 * (SELECT MIN(salaire) FROM employee);
+# test Pratique
+composer update
+php artisan migrate
+php artisan serve
+npm install
+npm run dev
+
